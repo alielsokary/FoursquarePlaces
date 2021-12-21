@@ -99,6 +99,7 @@
 		41053ABA277271C000DCD312 /* FoursquarePlaces */ = {
 			isa = PBXGroup;
 			children = (
+				41053AEC2772827300DCD312 /* Models */,
 				41053ABB277271C000DCD312 /* AppDelegate.swift */,
 				41053ABD277271C000DCD312 /* SceneDelegate.swift */,
 				41053ABF277271C000DCD312 /* ViewController.swift */,
@@ -127,6 +128,13 @@
 			path = FoursquarePlacesUITests;
 			sourceTree = "<group>";
 		};
+		41053AEC2772827300DCD312 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +145,7 @@
 				41053AB4277271C000DCD312 /* Sources */,
 				41053AB5277271C000DCD312 /* Frameworks */,
 				41053AB6277271C000DCD312 /* Resources */,
+				41053AEB2772755F00DCD312 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -252,6 +261,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41053AEB2772755F00DCD312 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		41053AB4277271C000DCD312 /* Sources */ = {
