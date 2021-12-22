@@ -16,6 +16,7 @@
 		41053AD3277271C900DCD312 /* FoursquarePlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053AD2277271C900DCD312 /* FoursquarePlacesTests.swift */; };
 		41053ADD277271C900DCD312 /* FoursquarePlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053ADC277271C900DCD312 /* FoursquarePlacesUITests.swift */; };
 		41053ADF277271C900DCD312 /* FoursquarePlacesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053ADE277271C900DCD312 /* FoursquarePlacesUITestsLaunchTests.swift */; };
+		41053AEE2772857B00DCD312 /* PlacesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053AED2772857B00DCD312 /* PlacesResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		41053AD8277271C900DCD312 /* FoursquarePlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquarePlacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41053ADC277271C900DCD312 /* FoursquarePlacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesUITests.swift; sourceTree = "<group>"; };
 		41053ADE277271C900DCD312 /* FoursquarePlacesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		41053AED2772857B00DCD312 /* PlacesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		41053AEC2772827300DCD312 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				41053AED2772857B00DCD312 /* PlacesResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41053AEE2772857B00DCD312 /* PlacesResult.swift in Sources */,
 				41053AC0277271C000DCD312 /* ViewController.swift in Sources */,
 				41053ABC277271C000DCD312 /* AppDelegate.swift in Sources */,
 				41053ABE277271C000DCD312 /* SceneDelegate.swift in Sources */,
