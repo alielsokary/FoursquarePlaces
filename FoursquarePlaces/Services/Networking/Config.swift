@@ -15,6 +15,8 @@ struct Config {
 		static let search = "places/nearby"
 	}
 
+	static let venuesLimit = "5"
+
 	static let apiKey = "fsq3mFYRYWX8iY00ZhbUzI3x1JIT2zO8uU2fuH286KTJ3tI="
 }
 enum HTTPHeaderField: String {
