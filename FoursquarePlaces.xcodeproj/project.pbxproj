@@ -17,6 +17,9 @@
 		41053ADD277271C900DCD312 /* FoursquarePlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053ADC277271C900DCD312 /* FoursquarePlacesUITests.swift */; };
 		41053ADF277271C900DCD312 /* FoursquarePlacesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053ADE277271C900DCD312 /* FoursquarePlacesUITestsLaunchTests.swift */; };
 		41053AEE2772857B00DCD312 /* PlacesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053AED2772857B00DCD312 /* PlacesResult.swift */; };
+		41410A9127739D1200593646 /* FoursquareRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9027739D1200593646 /* FoursquareRouter.swift */; };
+		41410A9327739D3300593646 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9227739D3300593646 /* HTTPMethod.swift */; };
+		41410A9727739D8300593646 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9627739D8300593646 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		41053ADC277271C900DCD312 /* FoursquarePlacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesUITests.swift; sourceTree = "<group>"; };
 		41053ADE277271C900DCD312 /* FoursquarePlacesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		41053AED2772857B00DCD312 /* PlacesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResult.swift; sourceTree = "<group>"; };
+		41410A9027739D1200593646 /* FoursquareRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareRouter.swift; sourceTree = "<group>"; };
+		41410A9227739D3300593646 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		41410A9627739D8300593646 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		41053ABA277271C000DCD312 /* FoursquarePlaces */ = {
 			isa = PBXGroup;
 			children = (
+				41410A8E27739CE500593646 /* Services */,
 				41053AEC2772827300DCD312 /* Models */,
 				41053ABB277271C000DCD312 /* AppDelegate.swift */,
 				41053ABD277271C000DCD312 /* SceneDelegate.swift */,
@@ -136,6 +143,24 @@
 				41053AED2772857B00DCD312 /* PlacesResult.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		41410A8E27739CE500593646 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				41410A8F27739CF200593646 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		41410A8F27739CF200593646 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				41410A9627739D8300593646 /* Config.swift */,
+				41410A9027739D1200593646 /* FoursquareRouter.swift */,
+				41410A9227739D3300593646 /* HTTPMethod.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,9 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41410A9127739D1200593646 /* FoursquareRouter.swift in Sources */,
 				41053AEE2772857B00DCD312 /* PlacesResult.swift in Sources */,
+				41410A9327739D3300593646 /* HTTPMethod.swift in Sources */,
 				41053AC0277271C000DCD312 /* ViewController.swift in Sources */,
 				41053ABC277271C000DCD312 /* AppDelegate.swift in Sources */,
+				41410A9727739D8300593646 /* Config.swift in Sources */,
 				41053ABE277271C000DCD312 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
