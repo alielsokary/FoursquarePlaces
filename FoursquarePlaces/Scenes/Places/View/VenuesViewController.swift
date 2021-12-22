@@ -14,19 +14,13 @@ class VenuesViewController: UIViewController {
 
 	private let cellIdentifier = "VenueTableViewCell"
 
-	let service = VenuesServiceImpl()
+	let viewModel = VenueListViewModel()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		viewModel.delegate = self
 		setupTableView()
-		service.search(location: "") { result in
-			switch result {
-			case let .success(places):
-				print(places)
-			case let .failure(error):
-				print(error)
-			}
-		}
+		viewModel.search(location: "")
 	}
 
 }
@@ -37,6 +31,8 @@ private extension VenuesViewController {
 	func setupTableView() {
 		tableView.tableFooterView = UIView()
 		tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+		tableView.dataSource = self
+		tableView.delegate = self
 	}
 }
 
@@ -44,11 +40,13 @@ private extension VenuesViewController {
 
 extension VenuesViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 1
+		return viewModel.numberOfVenues
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! VenueTableViewCell
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier,
+									 for: indexPath) as? VenueTableViewCell else { return UITableViewCell() }
+		cell.viewModel = viewModel.venues[indexPath.row]
 		return cell
 	}
 }
@@ -57,10 +55,25 @@ extension VenuesViewController: UITableViewDataSource {
 
 extension VenuesViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return view.frame.width
+		return 120
 	}
 
 	func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
 		return false
 	}
+}
+
+// MARK: - VenuesViewModelDelegate
+
+extension VenuesViewController: VenuesViewModelDelegate {
+	func viewModelDidLoadVenues() {
+		tableView.reloadData()
+	}
+
+	func viewModel(_ viewModel: VenueListViewModel, failedToLoadImagesWithError error: NetworkError) {
+		let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+		alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+		present(alertController, animated: true, completion: nil)
+	}
+
 }

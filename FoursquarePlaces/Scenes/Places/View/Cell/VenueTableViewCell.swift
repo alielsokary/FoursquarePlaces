@@ -17,13 +17,22 @@ class VenueTableViewCell: UITableViewCell {
 
 	override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+		self.selectionStyle = .none
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+	var viewModel: VenueViewModel! {
+		didSet {
+			self.setup()
+		}
+	}
 
-        // Configure the view for the selected state
-    }
+}
 
+private extension VenueTableViewCell {
+	func setup() {
+		lblName.text = viewModel.name
+		lblAddress.text = viewModel.address
+		lblDistance.text = "\(viewModel.distance)"
+		lblCategory.text = viewModel.category
+	}
 }

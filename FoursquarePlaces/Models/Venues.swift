@@ -8,13 +8,13 @@
 
 import Foundation
 
-// MARK: - Places
-struct Places: Codable {
-	let results: [Result]?
+// MARK: - Venues
+struct Venues: Codable {
+	let results: [Venue]?
 }
 
-// MARK: - Result
-struct Result: Codable {
+// MARK: - Venue
+struct Venue: Codable {
 	let fsqID: String?
 	let categories: [Category]?
 	let distance: Int?
