@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	let service = VenuesServiceImpl()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		service.search(location: "") { result in
+			switch result {
+			case let .success(places):
+				print(places)
+			case let .failure(error):
+				print(error)
+			}
+		}
 	}
 
 }
