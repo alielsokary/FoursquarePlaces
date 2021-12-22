@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		41053ABC277271C000DCD312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053ABB277271C000DCD312 /* AppDelegate.swift */; };
 		41053ABE277271C000DCD312 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053ABD277271C000DCD312 /* SceneDelegate.swift */; };
-		41053AC0277271C000DCD312 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053ABF277271C000DCD312 /* ViewController.swift */; };
+		41053AC0277271C000DCD312 /* VenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053ABF277271C000DCD312 /* VenuesViewController.swift */; };
 		41053AC3277271C000DCD312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41053AC1277271C000DCD312 /* Main.storyboard */; };
 		41053AC5277271C800DCD312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41053AC4277271C800DCD312 /* Assets.xcassets */; };
 		41053AC8277271C800DCD312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41053AC6277271C800DCD312 /* LaunchScreen.storyboard */; };
@@ -23,6 +23,8 @@
 		41410A992773A51700593646 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A982773A51700593646 /* NetworkService.swift */; };
 		41410A9B2773A57500593646 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9A2773A57500593646 /* NetworkError.swift */; };
 		41410AA12773A88600593646 /* VenuesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410AA02773A88500593646 /* VenuesService.swift */; };
+		41410AA52773C5EE00593646 /* VenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410AA32773C5EE00593646 /* VenueTableViewCell.swift */; };
+		41410AA62773C5EE00593646 /* VenueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41410AA42773C5EE00593646 /* VenueTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,7 @@
 		41053AB8277271C000DCD312 /* FoursquarePlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquarePlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41053ABB277271C000DCD312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41053ABD277271C000DCD312 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		41053ABF277271C000DCD312 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		41053ABF277271C000DCD312 /* VenuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
 		41053AC2277271C000DCD312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41053AC4277271C800DCD312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41053AC7277271C800DCD312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		41410A982773A51700593646 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		41410A9A2773A57500593646 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		41410AA02773A88500593646 /* VenuesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesService.swift; sourceTree = "<group>"; };
+		41410AA32773C5EE00593646 /* VenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTableViewCell.swift; sourceTree = "<group>"; };
+		41410AA42773C5EE00593646 /* VenueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenueTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +195,8 @@
 		41410A9E2773A84C00593646 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				41053ABF277271C000DCD312 /* ViewController.swift */,
+				41410AA22773C5CC00593646 /* Cell */,
+				41053ABF277271C000DCD312 /* VenuesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +207,15 @@
 				41410AA02773A88500593646 /* VenuesService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		41410AA22773C5CC00593646 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				41410AA32773C5EE00593646 /* VenueTableViewCell.swift */,
+				41410AA42773C5EE00593646 /* VenueTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41053AC8277271C800DCD312 /* LaunchScreen.storyboard in Resources */,
+				41410AA62773C5EE00593646 /* VenueTableViewCell.xib in Resources */,
 				41053AC5277271C800DCD312 /* Assets.xcassets in Resources */,
 				41053AC3277271C000DCD312 /* Main.storyboard in Resources */,
 			);
@@ -362,11 +377,12 @@
 				41053AEE2772857B00DCD312 /* PlacesResult.swift in Sources */,
 				41410A992773A51700593646 /* NetworkService.swift in Sources */,
 				41410A9327739D3300593646 /* HTTPMethod.swift in Sources */,
-				41053AC0277271C000DCD312 /* ViewController.swift in Sources */,
+				41053AC0277271C000DCD312 /* VenuesViewController.swift in Sources */,
 				41053ABC277271C000DCD312 /* AppDelegate.swift in Sources */,
 				41410A9B2773A57500593646 /* NetworkError.swift in Sources */,
 				41410A9727739D8300593646 /* Config.swift in Sources */,
 				41053ABE277271C000DCD312 /* SceneDelegate.swift in Sources */,
+				41410AA52773C5EE00593646 /* VenueTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
