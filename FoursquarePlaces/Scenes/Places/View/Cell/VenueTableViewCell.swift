@@ -34,7 +34,7 @@ private extension VenueTableViewCell {
 	func setup() {
 		lblName.text = viewModel.name
 		lblAddress.text = "Address: " + viewModel.address
-		lblDistance.text = "Distance: \(viewModel.distance)"
+		lblDistance.text = "Distance: \(viewModel.distance)" + " Meters"
 		lblCategory.text = "Category: " + viewModel.category
 	}
 
