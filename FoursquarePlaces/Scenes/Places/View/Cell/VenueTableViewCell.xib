@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,51 +18,71 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="TfC-bl-vFv">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3O-lE-uYi">
                         <rect key="frame" x="8" y="8" width="304" height="130"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTr-VM-Cac">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="30.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjp-FG-fia">
-                                <rect key="frame" x="0.0" y="33.5" width="304" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-eJ-tv7">
-                                <rect key="frame" x="0.0" y="66.5" width="304" height="30.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aE-dB-9rM">
-                                <rect key="frame" x="0.0" y="100" width="304" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="TfC-bl-vFv">
+                                <rect key="frame" x="5" y="5" width="294" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTr-VM-Cac" customClass="FPMediumLabel" customModule="FoursquarePlaces" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjp-FG-fia" customClass="FPMediumLabel" customModule="FoursquarePlaces" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="31" width="294" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-eJ-tv7" customClass="FPMediumLabel" customModule="FoursquarePlaces" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="61.5" width="294" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aE-dB-9rM" customClass="FPRegularLabel" customModule="FoursquarePlaces" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92.5" width="294" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                    </stackView>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TfC-bl-vFv" firstAttribute="top" secondItem="V3O-lE-uYi" secondAttribute="top" constant="5" id="3lB-LJ-hrK"/>
+                            <constraint firstAttribute="trailing" secondItem="TfC-bl-vFv" secondAttribute="trailing" constant="5" id="9Bw-B1-eF9"/>
+                            <constraint firstAttribute="bottom" secondItem="TfC-bl-vFv" secondAttribute="bottom" constant="5" id="XZa-xi-fV5"/>
+                            <constraint firstItem="TfC-bl-vFv" firstAttribute="leading" secondItem="V3O-lE-uYi" secondAttribute="leading" constant="5" id="aCi-iD-chW"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="TfC-bl-vFv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="4HW-Sm-z7q"/>
-                    <constraint firstAttribute="bottom" secondItem="TfC-bl-vFv" secondAttribute="bottom" constant="8" id="pxs-a0-khV"/>
-                    <constraint firstItem="TfC-bl-vFv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="zpb-3n-iuJ"/>
-                    <constraint firstAttribute="trailing" secondItem="TfC-bl-vFv" secondAttribute="trailing" constant="8" id="zr7-PW-aDH"/>
+                    <constraint firstItem="V3O-lE-uYi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="7Gx-22-tAr"/>
+                    <constraint firstAttribute="trailing" secondItem="V3O-lE-uYi" secondAttribute="trailing" constant="8" id="VgC-6s-9KG"/>
+                    <constraint firstItem="V3O-lE-uYi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hjt-Ke-KN8"/>
+                    <constraint firstAttribute="bottom" secondItem="V3O-lE-uYi" secondAttribute="bottom" constant="8" id="t2P-gq-dub"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="lblAddress" destination="gjp-FG-fia" id="IB3-qb-Kiz"/>
                 <outlet property="lblCategory" destination="0aE-dB-9rM" id="kK0-ss-OcO"/>
                 <outlet property="lblDistance" destination="d0h-eJ-tv7" id="9zX-ap-4WV"/>
                 <outlet property="lblName" destination="TTr-VM-Cac" id="wIJ-nm-PpM"/>
+                <outlet property="viewBackground" destination="V3O-lE-uYi" id="Aau-BP-Cbq"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="158.70535714285714"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

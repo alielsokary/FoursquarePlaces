@@ -19,6 +19,7 @@ class VenuesViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		viewModel.delegate = self
+		setupUI()
 		setupTableView()
 		viewModel.search(location: "")
 	}
@@ -28,8 +29,16 @@ class VenuesViewController: UIViewController {
 // MARK: - Setup UI
 
 private extension VenuesViewController {
-	func setupTableView() {
+
+	func setupUI() {
+		self.title = "Venues"
+		navigationController?.navigationBar.prefersLargeTitles = true
+		tableView.separatorStyle = .none
+		tableView.backgroundColor = .clear
 		tableView.tableFooterView = UIView()
+	}
+
+	func setupTableView() {
 		tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
 		tableView.dataSource = self
 		tableView.delegate = self
@@ -55,7 +64,7 @@ extension VenuesViewController: UITableViewDataSource {
 
 extension VenuesViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 120
+		return 150
 	}
 
 	func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
