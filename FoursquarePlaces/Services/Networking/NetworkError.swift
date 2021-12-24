@@ -14,6 +14,7 @@ enum NetworkError: Error {
 	case requestTimeout
 	case internalServerError
 	case gatewatTimeout
+	case noInternetConnection
 	case unknownError
 }
 
@@ -30,6 +31,8 @@ extension NetworkError: LocalizedError {
 			return "Internal Server error"
 		case .gatewatTimeout:
 			return "Gateway timeout"
+		case .noInternetConnection:
+			return "The Internet connection appears to be offline. Please try again."
 		case .unknownError:
 			return "Something went wrong please try again later"
 		}

@@ -24,12 +24,16 @@ class NetworkService: NetworkServiceProtocol {
 
 		guard let request = try? endpoint.asURLRequest() else { return }
 
-		session.dataTask(with: request) { (data, response, _) in
+		session.dataTask(with: request) { (data, response, error) in
 
 			DispatchQueue.main.async { [weak self] in
 				if let httpResponse = response as? HTTPURLResponse,
 				   !(200 ... 299).contains(httpResponse.statusCode) {
 					completion(.failure(self?.handleError(forCode: httpResponse.statusCode) ?? .unknownError))
+				}
+
+				if let error = error as NSError?, error.domain == NSURLErrorDomain && error.code == NSURLErrorNotConnectedToInternet {
+					completion(.failure(.noInternetConnection))
 				}
 
 				guard let data = data else {
