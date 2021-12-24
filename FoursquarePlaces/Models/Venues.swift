@@ -16,17 +16,14 @@ struct Venues: Codable {
 // MARK: - Venue
 struct Venue: Codable {
 	let fsqID: String?
+	let name: String?
+	let location: Location?
 	let categories: [Category]?
 	let distance: Int?
-	let geocodes: Geocodes?
-	let location: Location?
-	let name: String?
-	let timezone: String?
 
 	enum CodingKeys: String, CodingKey {
 		case fsqID = "fsq_id"
-		case categories, distance, geocodes, location, name
-		case timezone
+		case name, location, categories, distance
 	}
 }
 
