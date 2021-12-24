@@ -11,7 +11,7 @@ import CoreData
 
 class StorageManager {
 
-	lazy var persistentContainer: NSPersistentContainer = {
+	private lazy var persistentContainer: NSPersistentContainer = {
 		let container = NSPersistentContainer(name: "FoursquarePlaces")
 		container.loadPersistentStores(completionHandler: { (_, error) in
 			if let error = error as NSError? {
@@ -21,9 +21,11 @@ class StorageManager {
 		return container
 	}()
 
-	func save<T>(_ objects: [T], entityName: String, completion: (NSManagedObjectContext) -> Void) {
-		let context = persistentContainer.viewContext
+	private var context: NSManagedObjectContext {
+		return persistentContainer.viewContext
+	}
 
+	func save<T>(_ objects: [T], entityName: String, completion: (NSManagedObjectContext) -> Void) {
 		completion(context)
 		do {
 			try context.save()
@@ -33,7 +35,6 @@ class StorageManager {
 	}
 
 	func fetch<T: NSManagedObject>(entityName: String, completion: ([NSFetchRequestResult]) -> [T]) -> [T]? {
-		let context = persistentContainer.viewContext
 		let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
 		request.returnsObjectsAsFaults = false
 		var retrievedObjects: [T] = []
@@ -53,15 +54,14 @@ class StorageManager {
 			return $0 ? true : $1.type == NSInMemoryStoreType
 		}
 
-		let managedObjectContext = persistentContainer.viewContext
 		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
 
 		if isInMemoryStore {
 			do {
-				let entities = try managedObjectContext.fetch(fetchRequest)
+				let entities = try context.fetch(fetchRequest)
 				for entity in entities {
 					if let entity = entity as? NSManagedObject {
-						managedObjectContext.delete(entity)
+						context.delete(entity)
 					}
 				}
 			} catch let error as NSError {
@@ -70,20 +70,10 @@ class StorageManager {
 		} else {
 			let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
 			do {
-				try managedObjectContext.execute(batchDeleteRequest)
+				try context.execute(batchDeleteRequest)
 			} catch let error as NSError {
 				print(error)
 			}
-		}
-	}
-
-	func delete<T: NSManagedObject>(_ object: T) {
-		let context = persistentContainer.viewContext
-		context.delete(object)
-		do {
-			try context.save()
-		} catch {
-			print(error.localizedDescription)
 		}
 	}
 }
