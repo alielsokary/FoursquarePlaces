@@ -17,6 +17,12 @@
 		41053ADD277271C900DCD312 /* FoursquarePlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053ADC277271C900DCD312 /* FoursquarePlacesUITests.swift */; };
 		41053ADF277271C900DCD312 /* FoursquarePlacesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053ADE277271C900DCD312 /* FoursquarePlacesUITestsLaunchTests.swift */; };
 		41053AEE2772857B00DCD312 /* Venues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053AED2772857B00DCD312 /* Venues.swift */; };
+		41073A7227765D6000F2CFE6 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41073A7127765D6000F2CFE6 /* FontManager.swift */; };
+		41073A7727765E4900F2CFE6 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41073A7427765E4900F2CFE6 /* Roboto-Medium.ttf */; };
+		41073A7827765E4900F2CFE6 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41073A7527765E4900F2CFE6 /* Roboto-Bold.ttf */; };
+		41073A7927765E4900F2CFE6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41073A7627765E4900F2CFE6 /* Roboto-Regular.ttf */; };
+		41073A7C27765F5900F2CFE6 /* FPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41073A7B27765F5900F2CFE6 /* FPLabel.swift */; };
+		41073A7E2776688000F2CFE6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41073A7D2776688000F2CFE6 /* Colors.xcassets */; };
 		41410A9127739D1200593646 /* FoursquareRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9027739D1200593646 /* FoursquareRouter.swift */; };
 		41410A9327739D3300593646 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9227739D3300593646 /* HTTPMethod.swift */; };
 		41410A9727739D8300593646 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9627739D8300593646 /* Config.swift */; };
@@ -64,6 +70,12 @@
 		41053ADC277271C900DCD312 /* FoursquarePlacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesUITests.swift; sourceTree = "<group>"; };
 		41053ADE277271C900DCD312 /* FoursquarePlacesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		41053AED2772857B00DCD312 /* Venues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venues.swift; sourceTree = "<group>"; };
+		41073A7127765D6000F2CFE6 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		41073A7427765E4900F2CFE6 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		41073A7527765E4900F2CFE6 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		41073A7627765E4900F2CFE6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		41073A7B27765F5900F2CFE6 /* FPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPLabel.swift; sourceTree = "<group>"; };
+		41073A7D2776688000F2CFE6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		41410A9027739D1200593646 /* FoursquareRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareRouter.swift; sourceTree = "<group>"; };
 		41410A9227739D3300593646 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		41410A9627739D8300593646 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -127,6 +139,7 @@
 		41053ABA277271C000DCD312 /* FoursquarePlaces */ = {
 			isa = PBXGroup;
 			children = (
+				41073A7327765E3600F2CFE6 /* Supporting files */,
 				416F48F82775F55B00BA2B4E /* Library */,
 				41410A9C2773A83200593646 /* Scenes */,
 				41410A8E27739CE500593646 /* Services */,
@@ -135,6 +148,7 @@
 				41053ABD277271C000DCD312 /* SceneDelegate.swift */,
 				41053AC1277271C000DCD312 /* Main.storyboard */,
 				41053AC4277271C800DCD312 /* Assets.xcassets */,
+				41073A7D2776688000F2CFE6 /* Colors.xcassets */,
 				41053AC6277271C800DCD312 /* LaunchScreen.storyboard */,
 				41053AC9277271C800DCD312 /* Info.plist */,
 				41410AAF2775263500593646 /* FoursquarePlaces.xcdatamodeld */,
@@ -165,6 +179,25 @@
 				41053AED2772857B00DCD312 /* Venues.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		41073A7327765E3600F2CFE6 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				41073A7527765E4900F2CFE6 /* Roboto-Bold.ttf */,
+				41073A7427765E4900F2CFE6 /* Roboto-Medium.ttf */,
+				41073A7627765E4900F2CFE6 /* Roboto-Regular.ttf */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		41073A7A27765EE500F2CFE6 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				41073A7127765D6000F2CFE6 /* FontManager.swift */,
+				41073A7B27765F5900F2CFE6 /* FPLabel.swift */,
+			);
+			path = Styling;
 			sourceTree = "<group>";
 		};
 		41410A8E27739CE500593646 /* Services */ = {
@@ -253,6 +286,7 @@
 		416F48F82775F55B00BA2B4E /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				41073A7A27765EE500F2CFE6 /* Styling */,
 				416F48F92775F56200BA2B4E /* Extensions */,
 			);
 			path = Library;
@@ -370,8 +404,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41073A7727765E4900F2CFE6 /* Roboto-Medium.ttf in Resources */,
+				41073A7927765E4900F2CFE6 /* Roboto-Regular.ttf in Resources */,
 				41053AC8277271C800DCD312 /* LaunchScreen.storyboard in Resources */,
+				41073A7827765E4900F2CFE6 /* Roboto-Bold.ttf in Resources */,
 				41410AA62773C5EE00593646 /* VenueTableViewCell.xib in Resources */,
+				41073A7E2776688000F2CFE6 /* Colors.xcassets in Resources */,
 				41053AC5277271C800DCD312 /* Assets.xcassets in Resources */,
 				41053AC3277271C000DCD312 /* Main.storyboard in Resources */,
 			);
@@ -420,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41410A9127739D1200593646 /* FoursquareRouter.swift in Sources */,
+				41073A7227765D6000F2CFE6 /* FontManager.swift in Sources */,
 				41410AAB2773DC8200593646 /* VenueViewModel.swift in Sources */,
 				41410AA12773A88600593646 /* VenuesService.swift in Sources */,
 				41053AEE2772857B00DCD312 /* Venues.swift in Sources */,
@@ -434,6 +473,7 @@
 				41053ABE277271C000DCD312 /* SceneDelegate.swift in Sources */,
 				41410AA92773D3C000593646 /* VenueListViewModel.swift in Sources */,
 				41410AA52773C5EE00593646 /* VenueTableViewCell.swift in Sources */,
+				41073A7C27765F5900F2CFE6 /* FPLabel.swift in Sources */,
 				41410AAE2773E69100593646 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
