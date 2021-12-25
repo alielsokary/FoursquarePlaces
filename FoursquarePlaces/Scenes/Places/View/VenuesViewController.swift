@@ -21,7 +21,7 @@ class VenuesViewController: UIViewController {
 		viewModel.delegate = self
 		setupUI()
 		setupTableView()
-		viewModel.search(location: "")
+		viewModel.start()
 	}
 
 }
@@ -79,7 +79,7 @@ extension VenuesViewController: VenuesViewModelDelegate {
 		tableView.reloadData()
 	}
 
-	func viewModel(_ viewModel: VenueListViewModel, failedToLoadImagesWithError error: NetworkError) {
+	func viewModel(_ viewModel: VenueListViewModel, failedToLoadWith error: NSError) {
 		let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
 		alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
 		present(alertController, animated: true, completion: nil)

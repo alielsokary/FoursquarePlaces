@@ -31,7 +31,7 @@ enum FoursquareRouter {
 	var parameters: [String: Any]? {
 		switch self {
 		case .search(let location):
-			let parameters: [String: Any] = ["ll": "39.7524669,-105.0032014",
+			let parameters: [String: Any] = ["ll": location,
 											 "limit": Config.venuesLimit]
 
 			return parameters
