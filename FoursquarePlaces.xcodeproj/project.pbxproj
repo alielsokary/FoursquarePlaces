@@ -23,6 +23,7 @@
 		41073A7927765E4900F2CFE6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41073A7627765E4900F2CFE6 /* Roboto-Regular.ttf */; };
 		41073A7C27765F5900F2CFE6 /* FPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41073A7B27765F5900F2CFE6 /* FPLabel.swift */; };
 		41073A7E2776688000F2CFE6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41073A7D2776688000F2CFE6 /* Colors.xcassets */; };
+		41073A8127767AA800F2CFE6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41073A8027767AA800F2CFE6 /* LocationManager.swift */; };
 		41410A9127739D1200593646 /* FoursquareRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9027739D1200593646 /* FoursquareRouter.swift */; };
 		41410A9327739D3300593646 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9227739D3300593646 /* HTTPMethod.swift */; };
 		41410A9727739D8300593646 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9627739D8300593646 /* Config.swift */; };
@@ -76,6 +77,7 @@
 		41073A7627765E4900F2CFE6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		41073A7B27765F5900F2CFE6 /* FPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPLabel.swift; sourceTree = "<group>"; };
 		41073A7D2776688000F2CFE6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		41073A8027767AA800F2CFE6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		41410A9027739D1200593646 /* FoursquareRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareRouter.swift; sourceTree = "<group>"; };
 		41410A9227739D3300593646 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		41410A9627739D8300593646 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -200,9 +202,18 @@
 			path = Styling;
 			sourceTree = "<group>";
 		};
+		41073A7F27767A9600F2CFE6 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				41073A8027767AA800F2CFE6 /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		41410A8E27739CE500593646 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				41073A7F27767A9600F2CFE6 /* Location */,
 				41410AAC2773E67A00593646 /* Storage */,
 				41410A8F27739CF200593646 /* Networking */,
 			);
@@ -474,6 +485,7 @@
 				41410AA92773D3C000593646 /* VenueListViewModel.swift in Sources */,
 				41410AA52773C5EE00593646 /* VenueTableViewCell.swift in Sources */,
 				41073A7C27765F5900F2CFE6 /* FPLabel.swift in Sources */,
+				41073A8127767AA800F2CFE6 /* LocationManager.swift in Sources */,
 				41410AAE2773E69100593646 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,15 +665,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LV394V58Y3;
+				DEVELOPMENT_TEAM = USYCM7BRK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoursquarePlaces/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to lookup nearest venues.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -683,15 +697,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LV394V58Y3;
+				DEVELOPMENT_TEAM = USYCM7BRK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoursquarePlaces/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to lookup nearest venues.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -713,7 +729,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LV394V58Y3;
+				DEVELOPMENT_TEAM = USYCM7BRK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -738,7 +754,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LV394V58Y3;
+				DEVELOPMENT_TEAM = USYCM7BRK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -762,7 +778,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LV394V58Y3;
+				DEVELOPMENT_TEAM = USYCM7BRK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -785,7 +801,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LV394V58Y3;
+				DEVELOPMENT_TEAM = USYCM7BRK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
