@@ -24,6 +24,9 @@
 		41073A7C27765F5900F2CFE6 /* FPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41073A7B27765F5900F2CFE6 /* FPLabel.swift */; };
 		41073A7E2776688000F2CFE6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41073A7D2776688000F2CFE6 /* Colors.xcassets */; };
 		41073A8127767AA800F2CFE6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41073A8027767AA800F2CFE6 /* LocationManager.swift */; };
+		41073A852777584900F2CFE6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41073A842777584900F2CFE6 /* HomeViewController.swift */; };
+		41073A8727775B6100F2CFE6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41073A8627775B6100F2CFE6 /* AboutViewController.swift */; };
+		41073A8B2777618900F2CFE6 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41073A8A2777618900F2CFE6 /* AboutViewModel.swift */; };
 		41410A9127739D1200593646 /* FoursquareRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9027739D1200593646 /* FoursquareRouter.swift */; };
 		41410A9327739D3300593646 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9227739D3300593646 /* HTTPMethod.swift */; };
 		41410A9727739D8300593646 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410A9627739D8300593646 /* Config.swift */; };
@@ -78,6 +81,9 @@
 		41073A7B27765F5900F2CFE6 /* FPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPLabel.swift; sourceTree = "<group>"; };
 		41073A7D2776688000F2CFE6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		41073A8027767AA800F2CFE6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		41073A842777584900F2CFE6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		41073A8627775B6100F2CFE6 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		41073A8A2777618900F2CFE6 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
 		41410A9027739D1200593646 /* FoursquareRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareRouter.swift; sourceTree = "<group>"; };
 		41410A9227739D3300593646 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		41410A9627739D8300593646 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -210,6 +216,39 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		41073A822777580800F2CFE6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				41073A842777584900F2CFE6 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		41073A832777582100F2CFE6 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				41073A892777617300F2CFE6 /* View Model */,
+				41073A882777616B00F2CFE6 /* View */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		41073A882777616B00F2CFE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				41073A8627775B6100F2CFE6 /* AboutViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		41073A892777617300F2CFE6 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				41073A8A2777618900F2CFE6 /* AboutViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		41410A8E27739CE500593646 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,19 +274,21 @@
 		41410A9C2773A83200593646 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				41410A9D2773A84100593646 /* Places */,
+				41073A822777580800F2CFE6 /* Home */,
+				41410A9D2773A84100593646 /* Venues */,
+				41073A832777582100F2CFE6 /* About */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		41410A9D2773A84100593646 /* Places */ = {
+		41410A9D2773A84100593646 /* Venues */ = {
 			isa = PBXGroup;
 			children = (
 				41410A9F2773A85A00593646 /* Service */,
 				41410A9E2773A84C00593646 /* View */,
 				41410AA72773D3A300593646 /* View Model */,
 			);
-			path = Places;
+			path = Venues;
 			sourceTree = "<group>";
 		};
 		41410A9E2773A84C00593646 /* View */ = {
@@ -471,6 +512,7 @@
 				41410A9127739D1200593646 /* FoursquareRouter.swift in Sources */,
 				41073A7227765D6000F2CFE6 /* FontManager.swift in Sources */,
 				41410AAB2773DC8200593646 /* VenueViewModel.swift in Sources */,
+				41073A8727775B6100F2CFE6 /* AboutViewController.swift in Sources */,
 				41410AA12773A88600593646 /* VenuesService.swift in Sources */,
 				41053AEE2772857B00DCD312 /* Venues.swift in Sources */,
 				41410A992773A51700593646 /* NetworkService.swift in Sources */,
@@ -479,10 +521,12 @@
 				41053AC0277271C000DCD312 /* VenuesViewController.swift in Sources */,
 				41053ABC277271C000DCD312 /* AppDelegate.swift in Sources */,
 				41410A9B2773A57500593646 /* NetworkError.swift in Sources */,
+				41073A8B2777618900F2CFE6 /* AboutViewModel.swift in Sources */,
 				41410AB12775263500593646 /* FoursquarePlaces.xcdatamodeld in Sources */,
 				41410A9727739D8300593646 /* Config.swift in Sources */,
 				41053ABE277271C000DCD312 /* SceneDelegate.swift in Sources */,
 				41410AA92773D3C000593646 /* VenueListViewModel.swift in Sources */,
+				41073A852777584900F2CFE6 /* HomeViewController.swift in Sources */,
 				41410AA52773C5EE00593646 /* VenueTableViewCell.swift in Sources */,
 				41073A7C27765F5900F2CFE6 /* FPLabel.swift in Sources */,
 				41073A8127767AA800F2CFE6 /* LocationManager.swift in Sources */,
