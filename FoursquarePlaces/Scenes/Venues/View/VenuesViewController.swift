@@ -14,7 +14,7 @@ class VenuesViewController: UIViewController {
 
 	private let cellIdentifier = "VenueTableViewCell"
 
-	let viewModel = VenueListViewModel()
+	private let viewModel = VenueListViewModel()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
