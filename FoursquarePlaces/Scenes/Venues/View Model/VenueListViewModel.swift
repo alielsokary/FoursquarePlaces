@@ -28,8 +28,7 @@ class VenueListViewModel {
 	init(service: VenuesService = VenuesServiceImpl(), storageService: StorageService = StorageServiceImpl()) {
 		self.service = service
 		self.storageService = storageService
-		let storedVeues = storageService.fetch()
-		self.venues = storedVeues
+		self.fertchVenues()
 	}
 
 	func start() {
@@ -59,13 +58,26 @@ class VenueListViewModel {
 				if let venues = venues.results?.compactMap({ self.mapVenue(venue: $0) }) {
 					self.venues = venues
 				}
-				self.storageService.clear()
-				self.storageService.save(venues: self.venues)
+				self.clearStorage()
+				self.saveVenues(venues: self.venues)
 				self.delegate?.viewModelDidLoadVenues()
 			case let .failure(error):
 				self.delegate?.viewModel(self, failedToLoadWith: error as NSError)
 			}
 		}
+	}
+
+	func saveVenues(venues: [VenueViewModel]) {
+		self.storageService.save(venues: venues)
+	}
+
+	func fertchVenues() {
+		let storedVeues = storageService.fetch()
+		self.venues = storedVeues
+	}
+
+	func clearStorage() {
+		self.storageService.clear()
 	}
 }
 
