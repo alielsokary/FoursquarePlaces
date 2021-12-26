@@ -13,7 +13,7 @@ class VenueViewModelTests: XCTestCase {
 
 	var venue: Venue!
 	var category = Category(id: 517, name: "Restaurant")
-	var location = Location(address: " 77 st London",
+	var location = Location(address: "77 st London",
 						 country: "England",
 							crossStreet: "77 ats ST",
 							dma: "abd",

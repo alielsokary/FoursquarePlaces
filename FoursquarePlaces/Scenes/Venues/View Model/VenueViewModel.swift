@@ -8,7 +8,8 @@
 
 import Foundation
 
-class VenueViewModel {
+class VenueViewModel: Equatable {
+
 	let id: String
 	let name: String
 	let address: String
@@ -21,5 +22,9 @@ class VenueViewModel {
 		self.address = address
 		self.distance = distance
 		self.category = category
+	}
+
+	static func == (lhs: VenueViewModel, rhs: VenueViewModel) -> Bool {
+		lhs.name == rhs.name
 	}
 }
