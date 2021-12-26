@@ -12,7 +12,7 @@ final class HomeViewController: UIViewController {
 
 	@IBOutlet private weak var segmentedControl: UISegmentedControl!
 	@IBOutlet private weak var viewContent: UIView!
-	
+
 	private enum ViewControllerIndex: Int {
 		case venuesViewController = 0
 		case aboutViewController = 1
