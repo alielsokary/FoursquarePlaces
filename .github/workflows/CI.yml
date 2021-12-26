@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-test:
@@ -17,4 +17,4 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_13.1.app
 
     - name: Build and test
-      run: xcodebuild clean build test -project FoursquarePlaces.xcodeproj -scheme "FoursquarePlaces" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+      run: xcodebuild clean build test -project FoursquarePlaces.xcodeproj -scheme "FoursquarePlaces" -destination 'platform=iOS Simulator,name=iPhone 12' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
