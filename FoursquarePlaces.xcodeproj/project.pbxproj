@@ -13,7 +13,7 @@
 		41053AC3277271C000DCD312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41053AC1277271C000DCD312 /* Main.storyboard */; };
 		41053AC5277271C800DCD312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41053AC4277271C800DCD312 /* Assets.xcassets */; };
 		41053AC8277271C800DCD312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41053AC6277271C800DCD312 /* LaunchScreen.storyboard */; };
-		41053AD3277271C900DCD312 /* FoursquarePlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053AD2277271C900DCD312 /* FoursquarePlacesTests.swift */; };
+		41053AD3277271C900DCD312 /* VenueViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053AD2277271C900DCD312 /* VenueViewModelTests.swift */; };
 		41053AEE2772857B00DCD312 /* Venues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41053AED2772857B00DCD312 /* Venues.swift */; };
 		41073A7227765D6000F2CFE6 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41073A7127765D6000F2CFE6 /* FontManager.swift */; };
 		41073A7727765E4900F2CFE6 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41073A7427765E4900F2CFE6 /* Roboto-Medium.ttf */; };
@@ -60,7 +60,7 @@
 		41053AC7277271C800DCD312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41053AC9277271C800DCD312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41053ACE277271C900DCD312 /* FoursquarePlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquarePlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		41053AD2277271C900DCD312 /* FoursquarePlacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesTests.swift; sourceTree = "<group>"; };
+		41053AD2277271C900DCD312 /* VenueViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModelTests.swift; sourceTree = "<group>"; };
 		41053AED2772857B00DCD312 /* Venues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venues.swift; sourceTree = "<group>"; };
 		41073A7127765D6000F2CFE6 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		41073A7427765E4900F2CFE6 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		41053AD1277271C900DCD312 /* FoursquarePlacesTests */ = {
 			isa = PBXGroup;
 			children = (
-				41053AD2277271C900DCD312 /* FoursquarePlacesTests.swift */,
+				41053AD2277271C900DCD312 /* VenueViewModelTests.swift */,
 			);
 			path = FoursquarePlacesTests;
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41053AD3277271C900DCD312 /* FoursquarePlacesTests.swift in Sources */,
+				41053AD3277271C900DCD312 /* VenueViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,7 +649,6 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to lookup nearest venues.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -681,7 +680,6 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to lookup nearest venues.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

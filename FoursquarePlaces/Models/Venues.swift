@@ -31,18 +31,6 @@ struct Venue: Codable {
 struct Category: Codable {
 	let id: Int?
 	let name: String?
-	let icon: Icon?
-}
-
-// MARK: - Icon
-struct Icon: Codable {
-	let iconPrefix: String?
-	let suffix: String?
-
-	enum CodingKeys: String, CodingKey {
-		case iconPrefix = "prefix"
-		case suffix
-	}
 }
 
 // MARK: - Geocodes
